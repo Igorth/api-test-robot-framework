@@ -12,6 +12,8 @@ Should register a new Hot Pepper
 
     &{hotpeppers}       Factory HotPeppers
 
-    POST
-    ...     ${base_url}/api/hotpeppers/
-    ...     json=${hotpeppers}
+    ${response}     POST
+    ...             ${base_url}/api/hotpeppers/
+    ...             json=${hotpeppers}
+
+    Status Should Be        201     ${response}
