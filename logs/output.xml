@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.9 on darwin)" generated="20220202 16:50:16.080" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.9 on darwin)" generated="20220202 17:03:23.715" rpa="false" schemaversion="2">
 <suite id="s1" name="Specs" source="/Users/igordias/IdeaProjects/nbcc-apihotpeppers/specs">
 <suite id="s1-s1" name="CreateHotPeppers" source="/Users/igordias/IdeaProjects/nbcc-apihotpeppers/specs/CreateHotPeppers.robot">
 <kw name="Super Setup" library="Base" type="SETUP">
@@ -7,27 +7,27 @@
 <kw name="DELETE" library="RequestsLibrary">
 <arg>${API_URL}/api/hotpeppers</arg>
 <doc>Sends a DELETE request.</doc>
-<msg timestamp="20220202 16:50:16.427" level="INFO">DELETE Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers 
+<msg timestamp="20220202 17:03:24.186" level="INFO">DELETE Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers 
  path_url=/api/hotpeppers 
  headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
  body=None 
  </msg>
-<msg timestamp="20220202 16:50:16.427" level="INFO">DELETE Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers 
+<msg timestamp="20220202 17:03:24.187" level="INFO">DELETE Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers 
  status=200, reason= 
- headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Length': '0', 'Date': 'Wed, 02 Feb 2022 20:50:16 GMT', 'Via': '1.1 vegur'} 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Length': '0', 'Date': 'Wed, 02 Feb 2022 21:03:24 GMT', 'Via': '1.1 vegur'} 
  body=None 
  </msg>
-<status status="PASS" starttime="20220202 16:50:16.204" endtime="20220202 16:50:16.428"/>
+<status status="PASS" starttime="20220202 17:03:23.929" endtime="20220202 17:03:24.187"/>
 </kw>
-<status status="PASS" starttime="20220202 16:50:16.203" endtime="20220202 16:50:16.428"/>
+<status status="PASS" starttime="20220202 17:03:23.929" endtime="20220202 17:03:24.188"/>
 </kw>
-<status status="PASS" starttime="20220202 16:50:16.203" endtime="20220202 16:50:16.428"/>
+<status status="PASS" starttime="20220202 17:03:23.928" endtime="20220202 17:03:24.188"/>
 </kw>
 <test id="s1-s1-t1" name="Should register a new Hot Pepper">
 <kw name="Factory Torchbearer" library="Torchbearer">
 <var>${hotpeppers}</var>
-<msg timestamp="20220202 16:50:16.429" level="INFO">${hotpeppers} = {'brandName': 'Torchbearer', 'sauceName': 'Zombie Apocalypse', 'description': 'The Zombie Apocalypse Hot Sauce lives up to its name, combining Ghost Peppers and Habaneros with a mix of spices, vegetab...</msg>
-<status status="PASS" starttime="20220202 16:50:16.429" endtime="20220202 16:50:16.429"/>
+<msg timestamp="20220202 17:03:24.190" level="INFO">${hotpeppers} = {'brandName': 'Torchbearer', 'sauceName': 'Zombie Apocalypse', 'description': 'The Zombie Apocalypse Hot Sauce lives up to its name, combining Ghost Peppers and Habaneros with a mix of spices, vegetab...</msg>
+<status status="PASS" starttime="20220202 17:03:24.190" endtime="20220202 17:03:24.190"/>
 </kw>
 <kw name="POST New HotPeppers" library="HotPeppers">
 <var>${response}</var>
@@ -38,32 +38,32 @@
 <arg>json=${payload}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20220202 16:50:16.581" level="INFO">POST Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/ 
+<msg timestamp="20220202 17:03:24.388" level="INFO">POST Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/ 
  path_url=/api/hotpeppers/ 
  headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '330', 'Content-Type': 'application/json'} 
  body=b'{"brandName": "Torchbearer", "sauceName": "Zombie Apocalypse", "description": "The Zombie Apocalypse Hot Sauce lives up to its name, combining Ghost Peppers and Habaneros with a mix of spices, vegetables, and vinegar to create a slow burning blow torch.", "url": "https://heatonist.com/products/zombie-apocalypse", "heat": 100000}' 
  </msg>
-<msg timestamp="20220202 16:50:16.581" level="INFO">POST Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/ 
+<msg timestamp="20220202 17:03:24.388" level="INFO">POST Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/ 
  status=201, reason= 
- headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Wed, 02 Feb 2022 20:50:16 GMT', 'Via': '1.1 vegur'} 
- body={"id":9,"brandName":"Torchbearer","sauceName":"Zombie Apocalypse","description":"The Zombie Apocalypse Hot Sauce lives up to its name, combining Ghost Peppers and Habaneros with a mix of spices, vegetables, and vinegar to create a slow burning blow torch.","url":"https://heatonist.com/products/zombie-apocalypse","heat":100000} 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Wed, 02 Feb 2022 21:03:24 GMT', 'Via': '1.1 vegur'} 
+ body={"id":15,"brandName":"Torchbearer","sauceName":"Zombie Apocalypse","description":"The Zombie Apocalypse Hot Sauce lives up to its name, combining Ghost Peppers and Habaneros with a mix of spices, vegetables, and vinegar to create a slow burning blow torch.","url":"https://heatonist.com/products/zombie-apocalypse","heat":100000} 
  </msg>
-<msg timestamp="20220202 16:50:16.582" level="INFO">${response} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:16.430" endtime="20220202 16:50:16.582"/>
+<msg timestamp="20220202 17:03:24.389" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:24.191" endtime="20220202 17:03:24.389"/>
 </kw>
-<msg timestamp="20220202 16:50:16.582" level="INFO">${response} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:16.429" endtime="20220202 16:50:16.582"/>
+<msg timestamp="20220202 17:03:24.390" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:24.191" endtime="20220202 17:03:24.390"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
 <arg>201</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20220202 16:50:16.582" endtime="20220202 16:50:16.583"/>
+<status status="PASS" starttime="20220202 17:03:24.391" endtime="20220202 17:03:24.392"/>
 </kw>
-<status status="PASS" starttime="20220202 16:50:16.428" endtime="20220202 16:50:16.583"/>
+<status status="PASS" starttime="20220202 17:03:24.189" endtime="20220202 17:03:24.392"/>
 </test>
 <doc>Test Suite Registration API Hot Peppers API</doc>
-<status status="PASS" starttime="20220202 16:50:16.108" endtime="20220202 16:50:16.584"/>
+<status status="PASS" starttime="20220202 17:03:23.819" endtime="20220202 17:03:24.396"/>
 </suite>
 <suite id="s1-s2" name="DeleteHotPeppers" source="/Users/igordias/IdeaProjects/nbcc-apihotpeppers/specs/DeleteHotPeppers.robot">
 <kw name="Super Setup" library="Base" type="SETUP">
@@ -71,27 +71,27 @@
 <kw name="DELETE" library="RequestsLibrary">
 <arg>${API_URL}/api/hotpeppers</arg>
 <doc>Sends a DELETE request.</doc>
-<msg timestamp="20220202 16:50:16.744" level="INFO">DELETE Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers 
+<msg timestamp="20220202 17:03:24.587" level="INFO">DELETE Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers 
  path_url=/api/hotpeppers 
  headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
  body=None 
  </msg>
-<msg timestamp="20220202 16:50:16.744" level="INFO">DELETE Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers 
+<msg timestamp="20220202 17:03:24.587" level="INFO">DELETE Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers 
  status=200, reason= 
- headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Length': '0', 'Date': 'Wed, 02 Feb 2022 20:50:16 GMT', 'Via': '1.1 vegur'} 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Length': '0', 'Date': 'Wed, 02 Feb 2022 21:03:24 GMT', 'Via': '1.1 vegur'} 
  body=None 
  </msg>
-<status status="PASS" starttime="20220202 16:50:16.590" endtime="20220202 16:50:16.744"/>
+<status status="PASS" starttime="20220202 17:03:24.404" endtime="20220202 17:03:24.588"/>
 </kw>
-<status status="PASS" starttime="20220202 16:50:16.590" endtime="20220202 16:50:16.744"/>
+<status status="PASS" starttime="20220202 17:03:24.404" endtime="20220202 17:03:24.589"/>
 </kw>
-<status status="PASS" starttime="20220202 16:50:16.589" endtime="20220202 16:50:16.745"/>
+<status status="PASS" starttime="20220202 17:03:24.403" endtime="20220202 17:03:24.589"/>
 </kw>
 <test id="s1-s2-t1" name="Delete a HotPepper by ID">
 <kw name="Factory Cholula" library="Cholula">
 <var>${hotpeppers}</var>
-<msg timestamp="20220202 16:50:16.746" level="INFO">${hotpeppers} = {'brandName': 'Cholula', 'sauceName': 'Original', 'description': 'Cholula Original Hot Sauce is created from a generations old recipe that features carefully-selectedarbol and piquin peppers and a ble...</msg>
-<status status="PASS" starttime="20220202 16:50:16.745" endtime="20220202 16:50:16.746"/>
+<msg timestamp="20220202 17:03:24.591" level="INFO">${hotpeppers} = {'brandName': 'Cholula', 'sauceName': 'Original', 'description': 'Cholula Original Hot Sauce is created from a generations old recipe that features carefully-selectedarbol and piquin peppers and a ble...</msg>
+<status status="PASS" starttime="20220202 17:03:24.590" endtime="20220202 17:03:24.591"/>
 </kw>
 <kw name="POST New HotPeppers" library="HotPeppers">
 <var>${cholula}</var>
@@ -102,28 +102,28 @@
 <arg>json=${payload}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20220202 16:50:16.931" level="INFO">POST Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/ 
+<msg timestamp="20220202 17:03:24.755" level="INFO">POST Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/ 
  path_url=/api/hotpeppers/ 
  headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '405', 'Content-Type': 'application/json'} 
  body=b'{"brandName": "Cholula", "sauceName": "Original", "description": "Cholula Original Hot Sauce is created from a generations old recipe that features carefully-selectedarbol and piquin peppers and a blend of signature spices. We love it on burgers and chicken but have heard it\\u2019s amazing on pizza. Uncap Real Flavor with Cholula Original.", "url": "https://www.cholula.com/original.html", "heat": 3600}' 
  </msg>
-<msg timestamp="20220202 16:50:16.932" level="INFO">POST Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/ 
+<msg timestamp="20220202 17:03:24.756" level="INFO">POST Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/ 
  status=201, reason= 
- headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Wed, 02 Feb 2022 20:50:16 GMT', 'Via': '1.1 vegur'} 
- body={"id":10,"brandName":"Cholula","sauceName":"Original","description":"Cholula Original Hot Sauce is created from a generations old recipe that features carefully-selectedarbol and piquin peppers and a blend of signature spices. We love it on burgers and chicken but have heard it’s amazing on pizza. Uncap Real Flavor with Cholula Original.","url":"https://www.cholula.com/original.html","heat":3600} 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Wed, 02 Feb 2022 21:03:24 GMT', 'Via': '1.1 vegur'} 
+ body={"id":16,"brandName":"Cholula","sauceName":"Original","description":"Cholula Original Hot Sauce is created from a generations old recipe that features carefully-selectedarbol and piquin peppers and a blend of signature spices. We love it on burgers and chicken but have heard it’s amazing on pizza. Uncap Real Flavor with Cholula Original.","url":"https://www.cholula.com/original.html","heat":3600} 
  </msg>
-<msg timestamp="20220202 16:50:16.932" level="INFO">${response} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:16.746" endtime="20220202 16:50:16.932"/>
+<msg timestamp="20220202 17:03:24.756" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:24.592" endtime="20220202 17:03:24.756"/>
 </kw>
-<msg timestamp="20220202 16:50:16.932" level="INFO">${cholula} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:16.746" endtime="20220202 16:50:16.933"/>
+<msg timestamp="20220202 17:03:24.757" level="INFO">${cholula} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:24.591" endtime="20220202 17:03:24.757"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${cholula_id}</var>
 <arg>${cholula.json()}[id]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220202 16:50:16.934" level="INFO">${cholula_id} = 10</msg>
-<status status="PASS" starttime="20220202 16:50:16.933" endtime="20220202 16:50:16.934"/>
+<msg timestamp="20220202 17:03:24.759" level="INFO">${cholula_id} = 16</msg>
+<status status="PASS" starttime="20220202 17:03:24.758" endtime="20220202 17:03:24.759"/>
 </kw>
 <kw name="DELETE HotPepper By ID" library="HotPeppers">
 <var>${response}</var>
@@ -133,27 +133,27 @@
 <arg>${API_URL}/api/hotpeppers/${hotpepper_id}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a DELETE request.</doc>
-<msg timestamp="20220202 16:50:17.092" level="INFO">DELETE Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/10 
- path_url=/api/hotpeppers/10 
+<msg timestamp="20220202 17:03:24.924" level="INFO">DELETE Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/16 
+ path_url=/api/hotpeppers/16 
  headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
  body=None 
  </msg>
-<msg timestamp="20220202 16:50:17.092" level="INFO">DELETE Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/10 
+<msg timestamp="20220202 17:03:24.924" level="INFO">DELETE Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/16 
  status=204, reason= 
- headers={'Server': 'Cowboy', 'Content-Length': '0', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Date': 'Wed, 02 Feb 2022 20:50:16 GMT', 'Via': '1.1 vegur'} 
+ headers={'Server': 'Cowboy', 'Content-Length': '0', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Date': 'Wed, 02 Feb 2022 21:03:24 GMT', 'Via': '1.1 vegur'} 
  body=None 
  </msg>
-<msg timestamp="20220202 16:50:17.092" level="INFO">${response} = &lt;Response [204]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:16.935" endtime="20220202 16:50:17.092"/>
+<msg timestamp="20220202 17:03:24.925" level="INFO">${response} = &lt;Response [204]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:24.761" endtime="20220202 17:03:24.925"/>
 </kw>
-<msg timestamp="20220202 16:50:17.093" level="INFO">${response} = &lt;Response [204]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:16.934" endtime="20220202 16:50:17.093"/>
+<msg timestamp="20220202 17:03:24.926" level="INFO">${response} = &lt;Response [204]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:24.760" endtime="20220202 17:03:24.926"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
 <arg>204</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20220202 16:50:17.093" endtime="20220202 16:50:17.093"/>
+<status status="PASS" starttime="20220202 17:03:24.927" endtime="20220202 17:03:24.927"/>
 </kw>
 <kw name="GET HotPepper By ID" library="HotPeppers">
 <var>${response2}</var>
@@ -163,37 +163,37 @@
 <arg>${API_URL}/api/hotpeppers/${hotpepper_id}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20220202 16:50:17.263" level="INFO">GET Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/10 
- path_url=/api/hotpeppers/10 
+<msg timestamp="20220202 17:03:25.077" level="INFO">GET Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/16 
+ path_url=/api/hotpeppers/16 
  headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20220202 16:50:17.263" level="INFO">GET Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/10 
+<msg timestamp="20220202 17:03:25.078" level="INFO">GET Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/16 
  status=404, reason= 
- headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Length': '0', 'Date': 'Wed, 02 Feb 2022 20:50:16 GMT', 'Via': '1.1 vegur'} 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Length': '0', 'Date': 'Wed, 02 Feb 2022 21:03:24 GMT', 'Via': '1.1 vegur'} 
  body=None 
  </msg>
-<msg timestamp="20220202 16:50:17.264" level="INFO">${response} = &lt;Response [404]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:17.094" endtime="20220202 16:50:17.264"/>
+<msg timestamp="20220202 17:03:25.078" level="INFO">${response} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:24.928" endtime="20220202 17:03:25.078"/>
 </kw>
-<msg timestamp="20220202 16:50:17.264" level="INFO">${response2} = &lt;Response [404]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:17.094" endtime="20220202 16:50:17.264"/>
+<msg timestamp="20220202 17:03:25.079" level="INFO">${response2} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:24.928" endtime="20220202 17:03:25.079"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
 <arg>404</arg>
 <arg>${response2}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20220202 16:50:17.264" endtime="20220202 16:50:17.265"/>
+<status status="PASS" starttime="20220202 17:03:25.080" endtime="20220202 17:03:25.081"/>
 </kw>
-<status status="PASS" starttime="20220202 16:50:16.745" endtime="20220202 16:50:17.265"/>
+<status status="PASS" starttime="20220202 17:03:24.590" endtime="20220202 17:03:25.081"/>
 </test>
 <test id="s1-s2-t2" name="Should not delete the HotPepper by ID">
 <kw name="Set Variable" library="BuiltIn">
 <var>${hotpepper_id}</var>
 <arg>10</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220202 16:50:17.266" level="INFO">${hotpepper_id} = 10</msg>
-<status status="PASS" starttime="20220202 16:50:17.266" endtime="20220202 16:50:17.266"/>
+<msg timestamp="20220202 17:03:25.087" level="INFO">${hotpepper_id} = 10</msg>
+<status status="PASS" starttime="20220202 17:03:25.086" endtime="20220202 17:03:25.087"/>
 </kw>
 <kw name="DELETE HotPepper By ID" library="HotPeppers">
 <var>${response}</var>
@@ -203,32 +203,32 @@
 <arg>${API_URL}/api/hotpeppers/${hotpepper_id}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a DELETE request.</doc>
-<msg timestamp="20220202 16:50:17.423" level="INFO">DELETE Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/10 
+<msg timestamp="20220202 17:03:25.244" level="INFO">DELETE Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/10 
  path_url=/api/hotpeppers/10 
  headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
  body=None 
  </msg>
-<msg timestamp="20220202 16:50:17.423" level="INFO">DELETE Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/10 
+<msg timestamp="20220202 17:03:25.244" level="INFO">DELETE Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/10 
  status=404, reason= 
- headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Length': '0', 'Date': 'Wed, 02 Feb 2022 20:50:16 GMT', 'Via': '1.1 vegur'} 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Length': '0', 'Date': 'Wed, 02 Feb 2022 21:03:25 GMT', 'Via': '1.1 vegur'} 
  body=None 
  </msg>
-<msg timestamp="20220202 16:50:17.424" level="INFO">${response} = &lt;Response [404]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:17.267" endtime="20220202 16:50:17.424"/>
+<msg timestamp="20220202 17:03:25.244" level="INFO">${response} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:25.088" endtime="20220202 17:03:25.244"/>
 </kw>
-<msg timestamp="20220202 16:50:17.424" level="INFO">${response} = &lt;Response [404]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:17.266" endtime="20220202 16:50:17.424"/>
+<msg timestamp="20220202 17:03:25.245" level="INFO">${response} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:25.088" endtime="20220202 17:03:25.245"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
 <arg>404</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20220202 16:50:17.424" endtime="20220202 16:50:17.425"/>
+<status status="PASS" starttime="20220202 17:03:25.246" endtime="20220202 17:03:25.247"/>
 </kw>
-<status status="PASS" starttime="20220202 16:50:17.265" endtime="20220202 16:50:17.425"/>
+<status status="PASS" starttime="20220202 17:03:25.085" endtime="20220202 17:03:25.247"/>
 </test>
 <doc>Test Suite Delete API Hot Peppers</doc>
-<status status="PASS" starttime="20220202 16:50:16.585" endtime="20220202 16:50:17.426"/>
+<status status="PASS" starttime="20220202 17:03:24.398" endtime="20220202 17:03:25.251"/>
 </suite>
 <suite id="s1-s3" name="SearchHotPeppers" source="/Users/igordias/IdeaProjects/nbcc-apihotpeppers/specs/SearchHotPeppers.robot">
 <kw name="Super Setup" library="Base" type="SETUP">
@@ -236,27 +236,27 @@
 <kw name="DELETE" library="RequestsLibrary">
 <arg>${API_URL}/api/hotpeppers</arg>
 <doc>Sends a DELETE request.</doc>
-<msg timestamp="20220202 16:50:17.594" level="INFO">DELETE Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers 
+<msg timestamp="20220202 17:03:25.414" level="INFO">DELETE Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers 
  path_url=/api/hotpeppers 
  headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
  body=None 
  </msg>
-<msg timestamp="20220202 16:50:17.594" level="INFO">DELETE Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers 
+<msg timestamp="20220202 17:03:25.414" level="INFO">DELETE Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers 
  status=200, reason= 
- headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Length': '0', 'Date': 'Wed, 02 Feb 2022 20:50:17 GMT', 'Via': '1.1 vegur'} 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Length': '0', 'Date': 'Wed, 02 Feb 2022 21:03:25 GMT', 'Via': '1.1 vegur'} 
  body=None 
  </msg>
-<status status="PASS" starttime="20220202 16:50:17.434" endtime="20220202 16:50:17.594"/>
+<status status="PASS" starttime="20220202 17:03:25.261" endtime="20220202 17:03:25.414"/>
 </kw>
-<status status="PASS" starttime="20220202 16:50:17.434" endtime="20220202 16:50:17.594"/>
+<status status="PASS" starttime="20220202 17:03:25.260" endtime="20220202 17:03:25.416"/>
 </kw>
-<status status="PASS" starttime="20220202 16:50:17.433" endtime="20220202 16:50:17.594"/>
+<status status="PASS" starttime="20220202 17:03:25.260" endtime="20220202 17:03:25.416"/>
 </kw>
 <test id="s1-s3-t1" name="Search a HotPepper by ID">
 <kw name="Factory Heartbeat" library="Heartbeat">
 <var>${hotpeppers}</var>
-<msg timestamp="20220202 16:50:17.595" level="INFO">${hotpeppers} = {'brandName': 'Heartbeat', 'sauceName': 'Pineapple Habanero', 'description': 'Pineapple Habanero is Heartbeat Hot Sauce’s most recent offering and their spiciest to date!', 'url': 'https://www.saucema...</msg>
-<status status="PASS" starttime="20220202 16:50:17.595" endtime="20220202 16:50:17.595"/>
+<msg timestamp="20220202 17:03:25.417" level="INFO">${hotpeppers} = {'brandName': 'Heartbeat', 'sauceName': 'Pineapple Habanero', 'description': 'Pineapple Habanero is Heartbeat Hot Sauce’s most recent offering and their spiciest to date!', 'url': 'https://www.saucema...</msg>
+<status status="PASS" starttime="20220202 17:03:25.417" endtime="20220202 17:03:25.417"/>
 </kw>
 <kw name="POST New HotPeppers" library="HotPeppers">
 <var>${heartbeat}</var>
@@ -267,28 +267,28 @@
 <arg>json=${payload}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a POST request.</doc>
-<msg timestamp="20220202 16:50:17.748" level="INFO">POST Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/ 
+<msg timestamp="20220202 17:03:25.589" level="INFO">POST Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/ 
  path_url=/api/hotpeppers/ 
  headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '278', 'Content-Type': 'application/json'} 
  body=b'{"brandName": "Heartbeat", "sauceName": "Pineapple Habanero", "description": "Pineapple Habanero is Heartbeat Hot Sauce\\u2019s most recent offering and their spiciest to date!", "url": "https://www.saucemania.com.au/heartbeat-pineapple-habanero-hot-sauce-177ml/", "heat": 12200}' 
  </msg>
-<msg timestamp="20220202 16:50:17.748" level="INFO">POST Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/ 
+<msg timestamp="20220202 17:03:25.589" level="INFO">POST Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/ 
  status=201, reason= 
- headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Wed, 02 Feb 2022 20:50:17 GMT', 'Via': '1.1 vegur'} 
- body={"id":11,"brandName":"Heartbeat","sauceName":"Pineapple Habanero","description":"Pineapple Habanero is Heartbeat Hot Sauce’s most recent offering and their spiciest to date!","url":"https://www.saucemania.com.au/heartbeat-pineapple-habanero-hot-sauce-177ml/","heat":12200} 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Wed, 02 Feb 2022 21:03:25 GMT', 'Via': '1.1 vegur'} 
+ body={"id":17,"brandName":"Heartbeat","sauceName":"Pineapple Habanero","description":"Pineapple Habanero is Heartbeat Hot Sauce’s most recent offering and their spiciest to date!","url":"https://www.saucemania.com.au/heartbeat-pineapple-habanero-hot-sauce-177ml/","heat":12200} 
  </msg>
-<msg timestamp="20220202 16:50:17.749" level="INFO">${response} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:17.596" endtime="20220202 16:50:17.749"/>
+<msg timestamp="20220202 17:03:25.590" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:25.419" endtime="20220202 17:03:25.590"/>
 </kw>
-<msg timestamp="20220202 16:50:17.749" level="INFO">${heartbeat} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:17.595" endtime="20220202 16:50:17.749"/>
+<msg timestamp="20220202 17:03:25.591" level="INFO">${heartbeat} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:25.418" endtime="20220202 17:03:25.591"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${heartbeat_id}</var>
 <arg>${heartbeat.json()}[id]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220202 16:50:17.750" level="INFO">${heartbeat_id} = 11</msg>
-<status status="PASS" starttime="20220202 16:50:17.749" endtime="20220202 16:50:17.750"/>
+<msg timestamp="20220202 17:03:25.593" level="INFO">${heartbeat_id} = 17</msg>
+<status status="PASS" starttime="20220202 17:03:25.592" endtime="20220202 17:03:25.593"/>
 </kw>
 <kw name="GET HotPepper By ID" library="HotPeppers">
 <var>${response}</var>
@@ -298,67 +298,67 @@
 <arg>${API_URL}/api/hotpeppers/${hotpepper_id}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20220202 16:50:17.898" level="INFO">GET Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/11 
- path_url=/api/hotpeppers/11 
+<msg timestamp="20220202 17:03:25.787" level="INFO">GET Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/17 
+ path_url=/api/hotpeppers/17 
  headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20220202 16:50:17.898" level="INFO">GET Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/11 
+<msg timestamp="20220202 17:03:25.787" level="INFO">GET Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/17 
  status=200, reason= 
- headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Wed, 02 Feb 2022 20:50:17 GMT', 'Via': '1.1 vegur'} 
- body={"id":11,"brandName":"Heartbeat","sauceName":"Pineapple Habanero","description":"Pineapple Habanero is Heartbeat Hot Sauce’s most recent offering and their spiciest to date!","url":"https://www.saucemania.com.au/heartbeat-pineapple-habanero-hot-sauce-177ml/","heat":12200} 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Date': 'Wed, 02 Feb 2022 21:03:25 GMT', 'Via': '1.1 vegur'} 
+ body={"id":17,"brandName":"Heartbeat","sauceName":"Pineapple Habanero","description":"Pineapple Habanero is Heartbeat Hot Sauce’s most recent offering and their spiciest to date!","url":"https://www.saucemania.com.au/heartbeat-pineapple-habanero-hot-sauce-177ml/","heat":12200} 
  </msg>
-<msg timestamp="20220202 16:50:17.899" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:17.751" endtime="20220202 16:50:17.899"/>
+<msg timestamp="20220202 17:03:25.787" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:25.594" endtime="20220202 17:03:25.788"/>
 </kw>
-<msg timestamp="20220202 16:50:17.899" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:17.750" endtime="20220202 16:50:17.899"/>
+<msg timestamp="20220202 17:03:25.789" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:25.594" endtime="20220202 17:03:25.789"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
 <arg>200</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20220202 16:50:17.899" endtime="20220202 16:50:17.900"/>
+<status status="PASS" starttime="20220202 17:03:25.790" endtime="20220202 17:03:25.790"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${heartbeat.json()}[brandName]</arg>
 <arg>${hotpeppers}[brandName]</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220202 16:50:17.900" endtime="20220202 16:50:17.901"/>
+<status status="PASS" starttime="20220202 17:03:25.791" endtime="20220202 17:03:25.792"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${heartbeat.json()}[sauceName]</arg>
 <arg>${hotpeppers}[sauceName]</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220202 16:50:17.902" endtime="20220202 16:50:17.903"/>
+<status status="PASS" starttime="20220202 17:03:25.792" endtime="20220202 17:03:25.793"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${heartbeat.json()}[description]</arg>
 <arg>${hotpeppers}[description]</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220202 16:50:17.903" endtime="20220202 16:50:17.904"/>
+<status status="PASS" starttime="20220202 17:03:25.793" endtime="20220202 17:03:25.795"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${heartbeat.json()}[url]</arg>
 <arg>${hotpeppers}[url]</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220202 16:50:17.905" endtime="20220202 16:50:17.906"/>
+<status status="PASS" starttime="20220202 17:03:25.795" endtime="20220202 17:03:25.796"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${heartbeat.json()}[heat]</arg>
 <arg>${hotpeppers}[heat]</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220202 16:50:17.906" endtime="20220202 16:50:17.907"/>
+<status status="PASS" starttime="20220202 17:03:25.797" endtime="20220202 17:03:25.798"/>
 </kw>
-<status status="PASS" starttime="20220202 16:50:17.594" endtime="20220202 16:50:17.907"/>
+<status status="PASS" starttime="20220202 17:03:25.416" endtime="20220202 17:03:25.798"/>
 </test>
 <test id="s1-s3-t2" name="Should not return the HotPepper by ID">
 <kw name="Set Variable" library="BuiltIn">
 <var>${hotpepper_id}</var>
 <arg>10</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220202 16:50:17.909" level="INFO">${hotpepper_id} = 10</msg>
-<status status="PASS" starttime="20220202 16:50:17.908" endtime="20220202 16:50:17.909"/>
+<msg timestamp="20220202 17:03:25.803" level="INFO">${hotpepper_id} = 10</msg>
+<status status="PASS" starttime="20220202 17:03:25.803" endtime="20220202 17:03:25.803"/>
 </kw>
 <kw name="GET HotPepper By ID" library="HotPeppers">
 <var>${response}</var>
@@ -368,34 +368,34 @@
 <arg>${API_URL}/api/hotpeppers/${hotpepper_id}</arg>
 <arg>expected_status=any</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20220202 16:50:18.074" level="INFO">GET Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/10 
+<msg timestamp="20220202 17:03:25.969" level="INFO">GET Request : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/10 
  path_url=/api/hotpeppers/10 
  headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20220202 16:50:18.074" level="INFO">GET Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/10 
+<msg timestamp="20220202 17:03:25.969" level="INFO">GET Response : url=https://apiqanbccproject.herokuapp.com/api/hotpeppers/10 
  status=404, reason= 
- headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Length': '0', 'Date': 'Wed, 02 Feb 2022 20:50:17 GMT', 'Via': '1.1 vegur'} 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains', 'X-Frame-Options': 'DENY', 'Content-Length': '0', 'Date': 'Wed, 02 Feb 2022 21:03:25 GMT', 'Via': '1.1 vegur'} 
  body=None 
  </msg>
-<msg timestamp="20220202 16:50:18.075" level="INFO">${response} = &lt;Response [404]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:17.909" endtime="20220202 16:50:18.075"/>
+<msg timestamp="20220202 17:03:25.970" level="INFO">${response} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:25.805" endtime="20220202 17:03:25.970"/>
 </kw>
-<msg timestamp="20220202 16:50:18.075" level="INFO">${response} = &lt;Response [404]&gt;</msg>
-<status status="PASS" starttime="20220202 16:50:17.909" endtime="20220202 16:50:18.075"/>
+<msg timestamp="20220202 17:03:25.971" level="INFO">${response} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20220202 17:03:25.804" endtime="20220202 17:03:25.971"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
 <arg>404</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20220202 16:50:18.075" endtime="20220202 16:50:18.076"/>
+<status status="PASS" starttime="20220202 17:03:25.972" endtime="20220202 17:03:25.973"/>
 </kw>
-<status status="PASS" starttime="20220202 16:50:17.908" endtime="20220202 16:50:18.076"/>
+<status status="PASS" starttime="20220202 17:03:25.802" endtime="20220202 17:03:25.973"/>
 </test>
 <doc>Test Suite Search API Hot Peppers</doc>
-<status status="PASS" starttime="20220202 16:50:17.427" endtime="20220202 16:50:18.076"/>
+<status status="PASS" starttime="20220202 17:03:25.255" endtime="20220202 17:03:25.977"/>
 </suite>
-<status status="PASS" starttime="20220202 16:50:16.082" endtime="20220202 16:50:18.078"/>
+<status status="PASS" starttime="20220202 17:03:23.795" endtime="20220202 17:03:25.982"/>
 </suite>
 <statistics>
 <total>
