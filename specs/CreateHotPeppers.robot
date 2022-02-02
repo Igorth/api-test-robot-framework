@@ -5,7 +5,7 @@ Resource    ${EXECDIR}/resources/Base.robot
 Library     ${EXECDIR}/resources/factories/Cholula.py
 Library     ${EXECDIR}/resources/factories/Torchbearer.py
 
-Suite Setup     Run Keywords    Back To The Past
+Suite Setup     Super Setup
 
 *Test Cases*
 Should register a new Hot Pepper
