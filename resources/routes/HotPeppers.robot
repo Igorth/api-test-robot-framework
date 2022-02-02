@@ -11,3 +11,12 @@ POST New HotPeppers
     ...            expected_status=any
 
     [return]    ${response}
+
+GET HotPepper By ID
+    [Arguments]     ${hotpepper_id}
+
+    ${response}     GET
+    ...             ${API_URL}/api/hotpeppers/${hotpepper_id}
+    ...             expected_status=any
+
+    [return]        ${response}

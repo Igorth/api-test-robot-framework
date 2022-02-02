@@ -1,8 +1,7 @@
 *Settings*
-Documentation    Test Suite Hot Peppers API Registration
+Documentation    Test Suite Registration API Hot Peppers API
 
 Resource    ${EXECDIR}/resources/Base.robot
-Library     ${EXECDIR}/resources/factories/Cholula.py
 Library     ${EXECDIR}/resources/factories/Torchbearer.py
 
 Suite Setup     Super Setup
