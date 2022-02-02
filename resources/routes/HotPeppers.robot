@@ -20,3 +20,12 @@ GET HotPepper By ID
     ...             expected_status=any
 
     [return]        ${response}
+
+DELETE HotPepper By ID
+    [Arguments]     ${hotpepper_id}
+
+    ${response}     DELETE
+    ...             ${API_URL}/api/hotpeppers/${hotpepper_id}
+    ...             expected_status=any
+
+    [return]        ${response}

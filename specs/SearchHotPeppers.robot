@@ -22,4 +22,12 @@ Search a HotPepper by ID
     Should Be Equal     ${heartbeat.json()}[description]    ${hotpeppers}[description]
     Should Be Equal     ${heartbeat.json()}[url]            ${hotpeppers}[url]
     Should Be Equal     ${heartbeat.json()}[heat]           ${hotpeppers}[heat]
+
+Should not return the HotPepper by ID
+
+    ${hotpepper_id}     Set Variable        10
+
+    ${response}         GET HotPepper By ID  ${hotpepper_id}
+
+    Status Should Be    404     ${response}
     
